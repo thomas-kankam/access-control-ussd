@@ -1,0 +1,136 @@
+#1 [EMERGENCY] [Tue, 13 08 2024, 10:38:16]
+Error:
+SQLSTATE[42S22]: Column not found: 1054 Unknown column 'msisdn' in 'where clause' (SQL: select exists(select * from `clients` where `msisdn` = 233556906969) as `exists`) in file C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php on line 712
+
+Processing menu: welcome in file C:\laragon\www\access-control-ussd\app\Menus\Welcome.php
+
+Stack trace:
+
+
+#0 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select exists(s...', Array, Object(Closure))
+
+
+#1 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php(376): Illuminate\Database\Connection->run('select exists(s...', Array, Object(Closure))
+
+
+#2 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Query\Builder.php(2736): Illuminate\Database\Connection->select('select exists(s...', Array, true)
+
+
+#3 C:\laragon\www\access-control-ussd\app\Menus\Menu.php(16): Illuminate\Database\Query\Builder->exists()
+
+
+#4 C:\laragon\www\access-control-ussd\app\Menus\Welcome.php(10): App\Menus\Menu->check_msisdn('233556906969')
+
+
+#5 [internal function]: App\Menus\Welcome->before(Object(Rejoice\Foundation\UserResponse))
+
+
+#6 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(913): call_user_func(Array, Object(Rejoice\Foundation\UserResponse))
+
+
+#7 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(924): Rejoice\Foundation\Kernel->callBeforeHook()
+
+
+#8 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(1107): Rejoice\Foundation\Kernel->runState('welcome')
+
+
+#9 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(355): Rejoice\Foundation\Kernel->runWelcomeState()
+
+
+#10 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(278): Rejoice\Foundation\Kernel->handleUserRequest()
+
+
+#11 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\App.php(24): Rejoice\Foundation\Kernel->run()
+
+
+#12 C:\laragon\www\access-control-ussd\public\index.php(13): Rejoice\Foundation\App::start()
+
+
+#13 {main}
+
+User session:
+{
+    "__last_connection": 1723545496.177137,
+    "user_previous_responses": []
+}
+
+#2 [EMERGENCY] [Wed, 14 08 2024, 19:21:18]
+Error:
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'access_control_db.clients' doesn't exist (SQL: select exists(select * from `clients` where `msisdn` = 233556906969) as `exists`) in file C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php on line 712
+
+Processing menu: welcome in file C:\laragon\www\access-control-ussd\app\Menus\Welcome.php
+
+Stack trace:
+
+
+#0 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php(672): Illuminate\Database\Connection->runQueryCallback('select exists(s...', Array, Object(Closure))
+
+
+#1 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Connection.php(376): Illuminate\Database\Connection->run('select exists(s...', Array, Object(Closure))
+
+
+#2 C:\laragon\www\access-control-ussd\vendor\illuminate\database\Query\Builder.php(2736): Illuminate\Database\Connection->select('select exists(s...', Array, true)
+
+
+#3 C:\laragon\www\access-control-ussd\app\Menus\Menu.php(16): Illuminate\Database\Query\Builder->exists()
+
+
+#4 C:\laragon\www\access-control-ussd\app\Menus\Welcome.php(10): App\Menus\Menu->check_msisdn('233556906969')
+
+
+#5 [internal function]: App\Menus\Welcome->before(Object(Rejoice\Foundation\UserResponse))
+
+
+#6 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(913): call_user_func(Array, Object(Rejoice\Foundation\UserResponse))
+
+
+#7 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(924): Rejoice\Foundation\Kernel->callBeforeHook()
+
+
+#8 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(430): Rejoice\Foundation\Kernel->runState('welcome')
+
+
+#9 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(375): Rejoice\Foundation\Kernel->runPreviousSessionState()
+
+
+#10 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\Kernel.php(278): Rejoice\Foundation\Kernel->handleUserRequest()
+
+
+#11 C:\laragon\www\access-control-ussd\vendor\rejoice\framework\src\Foundation\App.php(24): Rejoice\Foundation\Kernel->run()
+
+
+#12 C:\laragon\www\access-control-ussd\public\index.php(13): Rejoice\Foundation\App::start()
+
+
+#13 {main}
+
+User session:
+{
+    "__last_connection": 1723652322.909043,
+    "user_previous_responses": [],
+    "modify_menus": {
+        "actions": {
+            "1": {
+                "display": "Check index number",
+                "next_menu": "FinanceMarket::Category",
+                "save_as": "Finance Market"
+            },
+            "2": {
+                "display": "Profile",
+                "next_menu": "GoLegal::ServiceList",
+                "save_as": "Go-Legal"
+            },
+            "0": {
+                "display": "Cancel",
+                "next_menu": "__end"
+            }
+        }
+    },
+    "current_menu_name": null,
+    "id": "1723663278110",
+    "session_data_accessible_by_app": {
+        "has_resume_from_previous_session": true
+    },
+    "history_bag": []
+}
+

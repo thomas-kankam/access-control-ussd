@@ -1,0 +1,34 @@
+{
+    "name": "rejoice/rejoice",
+    "description": "Rejoice building USSD applications",
+    "type": "project",
+    "require": {
+        "rejoice/framework": "^0.1",
+        "symfony/console": "^5.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "rejoice/simulator": "^0.2",
+        "nunomaduro/collision": "^5.4"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+
+<?php
+
+/**
+ * Bootstraps the console application
+ *
+ * @author Prince Dorcis <princedorcis@gmail.com>
+ */
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$console = new Rejoice\Console\Application;
+$console->run();
